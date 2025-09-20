@@ -1,0 +1,126 @@
+body {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: linear-gradient(0deg, rgba(227, 19, 19, 0.925) 0%, rgba(248,249,245,1.00) 35%, rgba(248,249,245,1.00) 65%, rgba(227, 19, 19, 0.925) 100%);
+    opacity: 0;
+    animation: fadeInBg 1s ease-in forwards;
+}
+
+@keyframes fadeInBg {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+body::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 5;
+    background-color:white ;
+    opacity: 0;
+    pointer-events: none;
+    animation: fadeIn3 2s ;
+}
+
+#title {
+    text-align: center;
+    color: rgb(196, 11, 72);
+    font-size: 4em;
+    font-family: 'Lobster Two', cursive;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+    z-index: 11;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two&display=swap');
+#menu {
+    position: absolute;
+    cursor: pointer;
+    top: 6.04%;
+    right: 3.04%;
+scale: 0.8;
+    z-index: 12;
+    transition: transform 0.3s ease;}
+
+/* Slide-down animation for a menu window */
+@keyframes slideDown {
+    from { height: 0; opacity: 0; }
+    to { height: 200px; opacity: 1; }
+}
+
+#slide-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: rgba(255, 0, 0, 0.7); /* semi-transparent for blur effect */
+    overflow: hidden;
+    z-index: 11;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transition: height 0.4s ease;
+    border-radius: 0 0 24px 24px;
+    backdrop-filter: blur(12px); /* <-- This blurs the background only */
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+}
+
+#slide-window.open {
+    height: 200px; /* Adjust as needed */
+}
+
+/* Bounce animation for #title */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+#title.bounce {
+    animation: bounce 1s;
+}
+
+#bg-blur {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 10; /* Lower than slide-window */
+    background: rgba(0,0,0,0.2); /* Optional: darken background */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+#bg-blur.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#bg-blur {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 10; /* Lower than slide-window */
+    background: rgba(0,0,0,0.2); /* Optional: darken background */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+
