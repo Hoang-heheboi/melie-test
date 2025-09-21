@@ -56,8 +56,9 @@ body::after {
     top: 6.04%;
     right: 3.04%;
 scale: 0.8;
-    z-index: 12;
-    transition: transform 0.3s ease;}
+    z-index: 18;
+border-radius: 100%;
+    transition: transform 0.5s ease;}
 
 /* Slide-down animation for a menu window */
 @keyframes slideDown {
@@ -71,7 +72,7 @@ scale: 0.8;
     left: 0;
     right: 0;
     height: 0;
-    background: rgba(255, 0, 0, 0.7); /* semi-transparent for blur effect */
+    background: rgba(222, 45, 45, 0.925); /* semi-transparent for blur effect */
     overflow: hidden;
     z-index: 11;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
@@ -122,5 +123,82 @@ scale: 0.8;
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
+#Info {
+    position: fixed;
+    font-size: 3em;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+left: 25%;
+cursor: pointer;
+    transition: transform 0.4s ease;
+    transform: scale(0.8);
+}
+#mark1 {
+   color: rgb(196, 11, 72)
+}
+
+#Info.shrink {
+    transform: scale(0.1); /* Shrinks to 85% of original size */
+}
+#Info:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease;
+    scale: 105%;
+}
+
+#booking-system {
+    background: #fff;
+    padding: 2em 3em;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(255, 0, 85, 0.15);
+    min-width: 320px;
+}
+
+h2 {
+    color: #ff0055;
+    margin-bottom: 1em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.3em;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+button {
+    background: #ff0055;
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 1em;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #d40047;
+}
+
+#confirmation {
+    margin-top: 1em;
+    color: #008000;
+    font-weight: bold;
+}
+
+
+
+
+
 
 

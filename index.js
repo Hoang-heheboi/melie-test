@@ -1,7 +1,10 @@
 const menuIcon = document.getElementById('menu');
 const slideWindow = document.getElementById('slide-window');
 const bgBlur = document.getElementById('bg-blur');
+const infoBox = document.getElementById('Info'); infoBox.addEventListener('click', () => { infoBox.classList.toggle('shrink'); });
 let menuOpen = false;
+
+
 
 menuIcon.onclick = function(event) {
     event.stopPropagation();
@@ -12,18 +15,13 @@ menuIcon.onclick = function(event) {
     menuIcon.style.opacity = 0;
 
     setTimeout(() => {
-        menuIcon.src = menuOpen ? 'close.png' : 'menu.png';
+        menuIcon.src = menuOpen ? 'menu3.png' : 'menu.png'; // Update if using different icons
         menuIcon.style.opacity = 1;
-    }, 300);
+    }, 0);
 
-    // Open or close menu and blur
-    if (menuOpen) {
-        slideWindow.classList.add('open');
-        bgBlur.classList.add('active');
-    } else {
-        slideWindow.classList.remove('open');
-        bgBlur.classList.remove('active');
-    }
+    // Toggle menu and blur
+    slideWindow.classList.toggle('open', menuOpen);
+    bgBlur.classList.toggle('active', menuOpen);
 };
 
 bgBlur.onclick = function() {
@@ -42,6 +40,7 @@ bgBlur.onclick = function() {
 slideWindow.onclick = function(event) {
     event.stopPropagation();
 };
+
 
 
 
