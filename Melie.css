@@ -83,7 +83,7 @@ border-radius: 100%;
 }
 
 #slide-window.open {
-    height: 200px; /* Adjust as needed */
+    height: 40%; /* Adjust as needed */
 }
 
 /* Bounce animation for #title */
