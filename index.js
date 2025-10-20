@@ -15,7 +15,7 @@ menuIcon.onclick = function(event) {
     menuIcon.style.opacity = 0;
 
     setTimeout(() => {
-        menuIcon.src = menuOpen ? 'menu3.png' : 'menu.png'; // Update if using different icons
+        menuIcon.src = menuOpen ? 'menu3.png' : 'menu4.png'; // Update if using different icons
         menuIcon.style.opacity = 1;
     }, 0);
 

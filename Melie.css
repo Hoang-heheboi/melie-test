@@ -138,9 +138,6 @@ cursor: pointer;
    color: rgb(196, 11, 72)
 }
 
-#Info.shrink {
-    transform: scale(0.1); /* Shrinks to 85% of original size */
-}
 #Info:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transition: transform 0.4s ease;
